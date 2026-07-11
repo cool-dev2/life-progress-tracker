@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeTrack — Life Progress Tracker</title>
+    <meta name="description" content="Track your life progress across health, career, finance, education, and personal growth">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Sidebar Navigation (Desktop) -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="app-logo">📊</div>
+            <span class="app-name">LifeTrack</span>
+        </div>
+        <div class="nav-items">
+            <a class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a class="nav-item" data-page="health">
+                <span class="nav-icon">💪</span>
+                <span class="nav-label">Health</span>
+            </a>
+            <a class="nav-item" data-page="career">
+                <span class="nav-icon">💼</span>
+                <span class="nav-label">Career</span>
+            </a>
+            <a class="nav-item" data-page="finance">
+                <span class="nav-icon">💰</span>
+                <span class="nav-label">Finance</span>
+            </a>
+            <a class="nav-item" data-page="education">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">Education</span>
+            </a>
+            <a class="nav-item" data-page="growth">
+                <span class="nav-icon">🧠</span>
+                <span class="nav-label">Growth</span>
+            </a>
+            <a class="nav-item" data-page="goals">
+                <span class="nav-icon">🎯</span>
+                <span class="nav-label">Goals</span>
+            </a>
+            <a class="nav-item" data-page="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Settings</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="bottom-nav" id="bottom-nav">
+        <a class="bottom-nav-item active" data-page="dashboard">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </a>
+        <a class="bottom-nav-item" data-page="health">
+            <span class="nav-icon">💪</span>
+            <span class="nav-label">Health</span>
+        </a>
+        <a class="bottom-nav-item" data-page="career">
+            <span class="nav-icon">💼</span>
+            <span class="nav-label">Career</span>
+        </a>
+        <a class="bottom-nav-item" data-page="finance">
+            <span class="nav-icon">💰</span>
+            <span class="nav-label">Finance</span>
+        </a>
+        <a class="bottom-nav-item" data-page="education">
+            <span class="nav-icon">📚</span>
+            <span class="nav-label">Learn</span>
+        </a>
+        <a class="bottom-nav-item" data-page="growth">
+            <span class="nav-icon">🧠</span>
+            <span class="nav-label">Growth</span>
+        </a>
+        <a class="bottom-nav-item" data-page="goals">
+            <span class="nav-icon">🎯</span>
+            <span class="nav-label">Goals</span>
+        </a>
+        <a class="bottom-nav-item" data-page="settings">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Settings</span>
+        </a>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <main class="main-content">
+        <!-- Dashboard Page -->
+        <section id="page-dashboard" class="page active">
+            <div class="page-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p class="page-subtitle">Your life at a glance</p>
+                </div>
+            </div>
+            <div class="page-content" id="dashboard-content"></div>
+        </section>
+
+        <!-- Health Page -->
+        <section id="page-health" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Health & Fitness</h1>
+                    <p class="page-subtitle">Track your physical wellbeing</p>
+                </div>
+                <button class="btn btn-primary" id="btn-add-health">+ Add Log</button>
+            </div>
+            <div class="page-content" id="health-content"></div>
+        </section>
+
+        <!-- Career Page -->
+        <section id="page-career" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Career & Work</h1>
+                    <p class="page-subtitle">Build your professional journey</p>
+                </div>
+                <button class="btn btn-primary" id="btn-add-career">+ Add Log</button>
+            </div>
+            <div class="page-content" id="career-content"></div>
+        </section>
+
+        <!-- Finance Page -->
+        <section id="page-finance" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Finance</h1>
+                    <p class="page-subtitle">Master your money</p>
+                </div>
+                <button class="btn btn-primary" id="btn-add-finance">+ Add Log</button>
+            </div>
+            <div class="page-content" id="finance-content"></div>
+        </section>
+
+        <!-- Education Page -->
+        <section id="page-education" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Education & Learning</h1>
+                    <p class="page-subtitle">Never stop learning</p>
+                </div>
+                <button class="btn btn-primary" id="btn-add-education">+ Add Log</button>
+            </div>
+            <div class="page-content" id="education-content"></div>
+        </section>
+
+        <!-- Growth Page -->
+        <section id="page-growth" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Personal Growth</h1>
+                    <p class="page-subtitle">Invest in yourself</p>
+                </div>
+                <button class="btn btn-primary" id="btn-add-growth">+ Add Log</button>
+            </div>
+            <div class="page-content" id="growth-content"></div>
+        </section>
+
+        <!-- Goals Page -->
+        <section id="page-goals" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Goals & Milestones</h1>
+                    <p class="page-subtitle">Dream big, achieve bigger</p>
+                </div>
+                <button class="btn btn-primary" id="btn-add-goal">+ Add Goal</button>
+            </div>
+            <div class="page-content" id="goals-content"></div>
+        </section>
+
+        <!-- Settings Page -->
+        <section id="page-settings" class="page">
+            <div class="page-header">
+                <div>
+                    <h1>Settings</h1>
+                    <p class="page-subtitle">Customize your experience</p>
+                </div>
+            </div>
+            <div class="page-content" id="settings-content"></div>
+        </section>
+    </main>
+
+    <!-- Overlay Containers -->
+    <div id="toast-container"></div>
+    <div id="modal-container"></div>
+
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- App Logic Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/health.js"></script>
+    <script src="js/career.js"></script>
+    <script src="js/finance.js"></script>
+    <script src="js/education.js"></script>
+    <script src="js/growth.js"></script>
+    <script src="js/goals.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
